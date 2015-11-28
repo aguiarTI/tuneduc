@@ -14,34 +14,57 @@
 	<meta name="description" property="og:description" content="Tuneduc - Cliente - Equipamentos laboratoriais"/>
 	<meta name="keywords" content="placa cervical, sistema tls, occipitocervical, anterolateral, cilindro expansivo, equipamentos"/>
 	
-	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/tuneduc_152x152.png?no_cache=1">
-	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/tuneduc_144x144.png?no_cache=1">
-	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/tuneduc_120x120.png?no_cache=1">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/tuneduc_114x114.png?no_cache=1">
-	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/tuneduc_76x76.png?no_cache=1">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/tuneduc_72x72.png?no_cache=1">
-	<link rel="apple-touch-icon" href="img/favicon/tuneduc_64x64.png?no_cache=1">
-	<link rel="icon" href="img/favicon/tuneduc_64x64.png?no_cache=1">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/tuneduc_152x152.png?no_cache=1"/>
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/tuneduc_144x144.png?no_cache=1"/>
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/tuneduc_120x120.png?no_cache=1"/>
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/tuneduc_114x114.png?no_cache=1"/>
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/tuneduc_76x76.png?no_cache=1"/>
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/tuneduc_72x72.png?no_cache=1"/>
+	<link rel="apple-touch-icon" href="img/favicon/tuneduc_64x64.png?no_cache=1"/>
+	<link rel="icon" href="img/favicon/tuneduc_64x64.png?no_cache=1"/>
 
-	<link rel="stylesheet" type="text/css" href="css/common.css?no_cache=0"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css?no_cache=1"/>
+	<link rel="stylesheet" type="text/css" href="css/plugin/swiper/swiper.min.css?no_cache=1"/>
 </head>
 <body>
 	<!-- container -->
 	<section class="container">
 		<!-- features -->
-		<section class="feature">
-			<!-- products -->
-			<div class="product" id="sistema_tls"></div>
-			
+		<section class="feature swiper-container">
+			<div class="swiper-wrapper">
+				<!-- products -->
+				<div class="product swiper-slide" id="sistema_tls"></div>
+				<div class="product swiper-slide" style="background-color: #333333;"></div>
+				<div class="product swiper-slide" style="background-color: #777777;"></div>
+			</div>
+
 			<!-- navigation products -->
-			<a href="javascript:void(0);" class="navigation prev"><span>&nbsp;</span></a>
-			<a href="javascript:void(0);" class="navigation next"><span>&nbsp;</span></a>
-		</section>	
+			<a href="javascript:void(0);" class="navigation prev swiper-button-prev"><span>&nbsp;</span></a>
+			<a href="javascript:void(0);" class="navigation next swiper-button-next"><span>&nbsp;</span></a>
+
+		</section>
+
+		<!-- thumbnails -->
+		<div class="swiper-slide">
+            <p><a href="#" data-slide="0">Link to Slide 2</a></p>
+            <p><a href="#" data-slide="1">Link to Slide 3</a></p>
+            <p><a href="#" data-slide="2">Link to Slide 4</a></p>
+        </div>
+
 	</section>
 
 	<!-- javascript -->
 	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
-
+	<script type="text/javascript" src="js/plugin/swiper/swiper.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+		_changeFeature.init();
+	</script>
 </body>
 </html>
+
+
+
+
+
+
