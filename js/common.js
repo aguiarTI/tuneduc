@@ -5,16 +5,19 @@
  * @copyright 2015
  ==================== JS FUNCTIONS ==================== */
 
+// função do plugin swiper para a elaboração dos slides de produtos
 var swiper = new Swiper('.swiper-container', {
-	spaceBetween: 20,
-	autoplay: 3000,
-	hashnav: true,
-	keyboardControl: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev'
+	spaceBetween: 0, // determina a margin direita entre um slide e outro
+	autoplay: 3000, // tempo de transação entre um slide e outro
+	loop: true, // navegação sem fim
+	hashnav: true, // inserção de hash na url para pegar o slide selecionado
+	keyboardControl: true, // navegação dos slides por setas do teclado
+    nextButton: '.swiper-button-next', // link para próximo slide
+    prevButton: '.swiper-button-prev' // link para slide anterior
 });
 
-var _changeFeature = {
+// função de navegação do produto através do thumbnail
+var _changeFeatureByThumbnail = {
 	init: function() {
 		var _thumbnail = $('a[data-slide]');
 		_thumbnail.on({
