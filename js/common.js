@@ -19,10 +19,20 @@ var swiper = new Swiper('.swiper-container', {
 // função de navegação do produto através do thumbnail
 var _changeFeatureByThumbnail = {
 	init: function() {
-		var _thumbnail = $('a[data-slide]');
+		var _thumbnail = $('body section.container ul.thumbnail li');
+		var _index = '';
+
 		_thumbnail.on({
+			mouseenter: function() {
+				_thumbnail.css({"display": 0.4, "-khtml-opacity": 0.4, "opacity": 0.4});
+				$(this).css({"-moz-opacity": 1, "-khtml-opacity": 1, "opacity": 1});
+			},
+			mouseleave: function() {
+				_thumbnail.css({"-moz-opacity": 1, "-khtml-opacity": 1, "opacity": 1});
+			},
 			click: function() {
-				swiper.slideTo($(this).data('slide'));
+				_index = $(this).find('a[data-slide]')
+				swiper.slideTo(_index.data('slide'));
 			}
 		});
 	}
