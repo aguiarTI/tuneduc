@@ -20,19 +20,22 @@ var swiper = new Swiper('.swiper-container', {
 var _changeFeatureByThumbnail = {
 	init: function() {
 		var _thumbnail = $('body section.container ul.thumbnail li');
+		var _nav = $('body section.container .feature a')
 		var _index = '';
 
 		_thumbnail.on({
-			mouseenter: function() {
-				_thumbnail.css({"display": 0.4, "-khtml-opacity": 0.4, "opacity": 0.4});
-				$(this).css({"-moz-opacity": 1, "-khtml-opacity": 1, "opacity": 1});
-			},
-			mouseleave: function() {
-				_thumbnail.css({"-moz-opacity": 1, "-khtml-opacity": 1, "opacity": 1});
-			},
 			click: function() {
-				_index = $(this).find('a[data-slide]')
+				_thumbnail.removeClass('actived').css({"-moz-opacity": 0.4, "-khtml-opacity": 0.4, "opacity": 0.4});
+				$(this).addClass('actived').css({"-moz-opacity": 1, "-khtml-opacity": 1, "opacity": 1});
+				_index = $(this).find('a[data-slide]');
 				swiper.slideTo(_index.data('slide'));
+			}
+		});
+		_nav.on({
+			click: function() {
+				_thumbnail.each( function(index) {
+					_thumbnail.removeClass('actived').css({"-moz-opacity": 1, "-khtml-opacity": 1, "opacity": 1});
+				});
 			}
 		});
 	}
