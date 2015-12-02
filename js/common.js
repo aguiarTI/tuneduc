@@ -5,6 +5,29 @@
  * @copyright 2015
  ==================== JS FUNCTIONS ==================== */
 
+ // função que abre e fecha o menu mobile
+var _openMobileNavigation = {
+	init: function() {
+		var _open = $('.openListMenu');
+		var _close = $('.closeListMenu');
+		var _listMenuMobile = $('.navMobileList');
+		_open.on({
+			click: function() {
+				$(this).css('display', 'none');
+				_close.css('display', 'block');
+				_listMenuMobile.css('top', '70px');
+			}
+		});
+		_close.on({
+			click: function() {
+				$(this).css('display', 'none');
+				_open.css('display', 'block');
+				_listMenuMobile.css('top', '-250px');
+			}
+		});
+	}
+}
+
 // função do plugin swiper para a elaboração dos slides de produtos
 var swiper = new Swiper('.swiper-container', {
 	spaceBetween: 0, // determina a margin direita entre um slide e outro
@@ -22,7 +45,6 @@ var _changeFeatureByThumbnail = {
 		var _thumbnail = $('body section.container ul.thumbnail li');
 		var _nav = $('body section.container .feature a')
 		var _index = '';
-
 		_thumbnail.on({
 			click: function() {
 				_thumbnail.removeClass('actived').css({"-moz-opacity": 0.4, "-khtml-opacity": 0.4, "opacity": 0.4});
